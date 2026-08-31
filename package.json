@@ -1,7 +1,7 @@
 {
   "name": "williams-solarized-dark",
   "displayName": "Williams Solarized Dark",
-  "description": "A refined Solarized Dark theme with enhanced semantic tokens, bold typography, and customized syntax highlighting.",
+  "description": "A custom variant of the default solarized dark theme",
   "version": "0.1.0",
   "publisher": "williamnorland",
   "repository": {
