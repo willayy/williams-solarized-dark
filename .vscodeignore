@@ -3,5 +3,6 @@
 .github/**
 .git/**
 .gitignore
+GEMINI.md
 node_modules/**
 
