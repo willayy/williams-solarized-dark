@@ -1,0 +1,33 @@
+{
+  "name": "williams-solarized-dark",
+  "displayName": "Williams Solarized Dark",
+  "description": "A refined Solarized Dark theme with enhanced semantic tokens, bold typography, and customized syntax highlighting.",
+  "version": "0.1.0",
+  "publisher": "williamnorland",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willayy/williams-solarized-dark.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "solarized",
+    "solarized dark",
+    "dark"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Williams Solarized Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/williams-solarized-dark-color-theme.json"
+      }
+    ]
+  }
+}
