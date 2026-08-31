@@ -1,0 +1,31 @@
+name: Release Extension VSIX
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Package extension (VSIX)
+        run: npx --yes @vscode/vsce package --out ./williams-solarized-dark.vsix
+
+      - name: Create GitHub Release and Upload VSIX
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./williams-solarized-dark.vsix
+          generate_release_notes: true
