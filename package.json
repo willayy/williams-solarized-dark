@@ -2,8 +2,9 @@
   "name": "williams-solarized-dark",
   "displayName": "Williams Solarized Dark",
   "description": "A custom variant of the default solarized dark theme",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "publisher": "williamnorland",
+  "license": "Unlicense",
   "repository": {
     "type": "git",
     "url": "https://github.com/willayy/williams-solarized-dark.git"
