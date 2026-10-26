@@ -24,8 +24,12 @@ jobs:
       - name: Package extension (VSIX)
         run: npx --yes @vscode/vsce package --out ./williams-solarized-dark.vsix
 
-      - name: Create GitHub Release and Upload VSIX
+      - name: Create GitHub Release and Upload Assets
         uses: softprops/action-gh-release@v2
         with:
-          files: ./williams-solarized-dark.vsix
+          files: |
+            ./williams-solarized-dark.vsix
+            ./themes/antigravity/williams-solarized-dark-antigravity.json
+            ./themes/ghostty/williams-solarized-dark.ghostty
+            ./plugin.json
           generate_release_notes: true
