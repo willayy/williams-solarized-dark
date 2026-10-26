@@ -11,7 +11,8 @@
       "seeds": {
         "background": "#002B36",
         "foreground": "#839496",
-        "primary": "#2AA198"
+        "primary": "#268BD2",
+        "primaryForeground": "#FFFFFF"
       },
       "syntax": {
         "comment": "#62c262",
