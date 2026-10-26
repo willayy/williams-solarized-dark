@@ -20,4 +20,3 @@ cursor-color = #d30102
 cursor-text = #002b36
 selection-background = #244952
 selection-foreground = #839496
-macos-titlebar-style = tabs
