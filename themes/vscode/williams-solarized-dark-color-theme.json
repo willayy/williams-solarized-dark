@@ -2,10 +2,11 @@
   "name": "Williams Solarized Dark",
   "type": "dark",
   "colors": {
+    "foreground": "#839496",
     "focusBorder": "#2AA19899",
     "selection.background": "#2AA19899",
     "input.background": "#003847",
-    "input.foreground": "#93A1A1",
+    "input.foreground": "#839496",
     "input.placeholderForeground": "#93A1A1AA",
     "inputOption.activeBorder": "#2AA19899",
     "inputValidation.infoBorder": "#363b5f",
@@ -57,15 +58,15 @@
     "editorGroupHeader.tabsBackground": "#004052",
     "tab.activeForeground": "#d6dbdb",
     "tab.activeBackground": "#002B37",
-    "tab.inactiveForeground": "#93A1A1",
+    "tab.inactiveForeground": "#839496",
     "tab.inactiveBackground": "#004052",
     "tab.border": "#003847",
     "tab.lastPinnedBorder": "#2AA19844",
     "activityBar.background": "#003847",
     "panel.border": "#2b2b4a",
     "sideBar.background": "#00212B",
-    "sideBarTitle.foreground": "#93A1A1",
-    "statusBar.foreground": "#93A1A1",
+    "sideBarTitle.foreground": "#839496",
+    "statusBar.foreground": "#839496",
     "statusBar.background": "#00212B",
     "statusBar.debuggingBackground": "#00212B",
     "statusBar.noFolderBackground": "#00212B",
@@ -471,7 +472,7 @@
         "variable"
       ],
       "settings": {
-        "foreground": "#adadadb9"
+        "foreground": "#839496"
       }
     },
     {
@@ -578,7 +579,7 @@
         "variable.other"
       ],
       "settings": {
-        "foreground": "#adadadb9",
+        "foreground": "#839496",
         "fontStyle": ""
       }
     },
