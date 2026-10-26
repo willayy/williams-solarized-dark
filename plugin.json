@@ -1,0 +1,29 @@
+{
+  "name": "williams-solarized-dark",
+  "displayName": "Williams Solarized Dark",
+  "description": "Williams Solarized Dark theme for Antigravity",
+  "version": "0.1.0",
+  "themes": [
+    {
+      "id": "williams-solarized-dark",
+      "label": "Williams Solarized Dark",
+      "mode": "dark",
+      "seeds": {
+        "background": "#002B36",
+        "foreground": "#839496",
+        "primary": "#2AA198"
+      },
+      "syntax": {
+        "comment": "#62c262",
+        "variable": "#adadad",
+        "number": "#2aa198",
+        "string": "#2AA198",
+        "keyword": "#859900",
+        "function": "#268BD2",
+        "className": "#ff9900",
+        "regex": "#c70000",
+        "punctuation": "#ffffff"
+      }
+    }
+  ]
+}
