@@ -1,5 +1,6 @@
 {
   "background": "#002B36",
   "foregroundOverride": "#839496",
-  "primary": "#2AA198"
+  "primary": "#268BD2",
+  "primaryForegroundOverride": "#FFFFFF"
 }
