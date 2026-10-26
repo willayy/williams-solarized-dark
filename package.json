@@ -27,7 +27,7 @@
       {
         "label": "Williams Solarized Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/williams-solarized-dark-color-theme.json"
+        "path": "./themes/vscode/williams-solarized-dark-color-theme.json"
       }
     ]
   }
