@@ -133,6 +133,22 @@
       "foreground": "#ff9900b9",
       "fontStyle": "bold"
     },
+    "interface": {
+      "foreground": "#ff9900b9",
+      "fontStyle": "bold"
+    },
+    "enum": {
+      "foreground": "#ff9900b9",
+      "fontStyle": "bold"
+    },
+    "struct": {
+      "foreground": "#ff9900b9",
+      "fontStyle": "bold"
+    },
+    "typeAlias": {
+      "foreground": "#ff9900b9",
+      "fontStyle": "bold"
+    },
     "keyword": {
       "foreground": "#859900",
       "fontStyle": ""
@@ -149,10 +165,7 @@
     },
     {
       "scope": [
-        "meta.embedded",
-        "source.groovy.embedded",
-        "string meta.image.inline.markdown",
-        "variable.legacy.builtin.python"
+        "meta.embedded"
       ],
       "settings": {
         "foreground": "#839496"
@@ -222,7 +235,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "#CB4B16"
+        "foreground": "#FF9900"
       }
     },
     {
@@ -283,7 +296,7 @@
       "name": "Inherited class",
       "scope": [
         "entity.other.inherited-class",
-        "punctuation.separator.namespace.ruby"
+        "punctuation.separator.namespace"
       ],
       "settings": {
         "foreground": "#6C71C4"
@@ -344,7 +357,7 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "#859900"
+        "foreground": "#FF9900"
       }
     },
     {
@@ -499,7 +512,8 @@
     },
     {
       "scope": [
-        "storage.type.function",
+        "storage.type",
+        "storage.modifier",
         "keyword.control"
       ],
       "settings": {
@@ -508,8 +522,45 @@
       }
     },
     {
+      "name": "Custom Types",
       "scope": [
-        "storage.type.string.python",
+        "entity.name.type",
+        "entity.name.class",
+        "entity.other.inherited-class",
+        "support.type",
+        "support.class",
+        "storage.type.primitive",
+        "storage.type.built-in",
+        "storage.type.generic",
+        "meta.type.parameters entity.name.type",
+        "meta.type.parameters support.type",
+        "meta.type.parameters variable",
+        "meta.type.parameters entity.name.variable",
+        "meta.type.argument entity.name.type",
+        "meta.type.argument support.type",
+        "meta.type.argument variable",
+        "meta.type.argument entity.name.variable"
+      ],
+      "settings": {
+        "foreground": "#FF9900",
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Custom Null and Undefined",
+      "scope": [
+        "constant.language.null",
+        "constant.language.undefined",
+        "constant.language.nil",
+        "support.type.builtin"
+      ],
+      "settings": {
+        "foreground": "#FF9900",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
         "string.regexp",
         "keyword.operator.quantifier.regexp",
         "keyword.operator.regexp",
@@ -531,11 +582,6 @@
         "punctuation.parenthesis.regexp",
         "punctuation.definition.group.regexp",
         "punctuation.definition.group.no-capture.regexp",
-        "punctuation.parenthesis.begin.regexp.python",
-        "punctuation.parenthesis.end.regexp.python",
-        "punctuation.parenthesis.non-capturing.begin.regexp.python",
-        "punctuation.parenthesis.non-capturing.end.regexp.python",
-        "keyword.operator.regexp.python",
         "punctuation.definition.group.begin.regexp",
         "punctuation.definition.group.end.regexp",
         "meta.group.regexp",
@@ -543,7 +589,6 @@
         "keyword.control.regexp",
         "support.other.escape.special.regexp",
         "invalid.illegal.regexp",
-        "source.regexp.python",
         "source.regexp"
       ],
       "settings": {
@@ -552,8 +597,8 @@
     },
     {
       "scope": [
-        "meta.fstring.python storage.type.string.python",
-        "string.interpolated.python storage.type.string.python",
+        "string.interpolated storage.type.string",
+        "meta.interpolation storage.type.string",
         "constant.character.format.placeholder",
         "punctuation.definition.template-expression",
         "constant.character.escape"
@@ -605,6 +650,13 @@
         "meta.brace",
         "punctuation.definition.parameters",
         "punctuation.definition.arguments",
+        "punctuation.definition.typeparameters",
+        "punctuation.bracket.angle",
+        "punctuation.definition.bracket.angle",
+        "punctuation.separator.comma",
+        "punctuation.separator.parameter",
+        "punctuation.accessor",
+        "punctuation.terminator",
         "punctuation.definition.list",
         "punctuation.definition.dict",
         "punctuation.parenthesis",
