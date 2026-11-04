@@ -74,5 +74,12 @@ jobs:
           if [ "$STATUS" = "200" ]; then
             echo "Version $VERSION is already published to Open VSX."
           else
-            npx --yes ovsx publish ./williams-solarized-dark.vsix -p "$OVSX_PAT"
+            OUTPUT=$(npx --yes ovsx publish ./williams-solarized-dark.vsix -p "$OVSX_PAT" 2>&1) || {
+              if echo "$OUTPUT" | grep -q "already published"; then
+                echo "Version $VERSION is already published to Open VSX."
+              else
+                echo "$OUTPUT"
+                exit 1
+              fi
+            }
           fi
