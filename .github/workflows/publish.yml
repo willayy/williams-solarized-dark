@@ -73,5 +73,6 @@ jobs:
           if [ "$STATUS" = "200" ]; then
             echo "Version $VERSION is already published to Open VSX."
           else
+            npx --yes ovsx create-namespace williamnorland -p "$OVSX_PAT" || true
             npx --yes ovsx publish ./williams-solarized-dark.vsix -p "$OVSX_PAT"
           fi
