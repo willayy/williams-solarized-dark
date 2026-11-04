@@ -2,6 +2,12 @@ name: Release Extension VSIX
 
 on:
   push:
+    branches:
+      - main
+    paths:
+      - 'themes/vscode/**'
+      - 'package.json'
+      - '.vscodeignore'
     tags:
       - 'v*'
   workflow_dispatch:
@@ -24,12 +30,34 @@ jobs:
       - name: Package extension (VSIX)
         run: npx --yes @vscode/vsce package --out ./williams-solarized-dark.vsix
 
-      - name: Create GitHub Release and Upload Assets
-        uses: softprops/action-gh-release@v2
-        with:
-          files: |
-            ./williams-solarized-dark.vsix
-            ./themes/antigravity/williams-solarized-dark-antigravity.json
-            ./themes/ghostty/williams-solarized-dark.ghostty
-            ./plugin.json
-          generate_release_notes: true
+      - name: Determine release tag
+        id: release_tag
+        run: |
+          if [ "${{ github.ref_type }}" = "tag" ]; then
+            echo "tag=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+          else
+            VERSION=$(node -p "require('./package.json').version")
+            echo "tag=v${VERSION}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.release_tag.outputs.tag }}"
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            gh release upload "$TAG" \
+              ./williams-solarized-dark.vsix \
+              ./themes/antigravity/williams-solarized-dark-antigravity.json \
+              ./themes/ghostty/williams-solarized-dark.ghostty \
+              ./plugin.json \
+              --clobber
+          else
+            gh release create "$TAG" \
+              ./williams-solarized-dark.vsix \
+              ./themes/antigravity/williams-solarized-dark-antigravity.json \
+              ./themes/ghostty/williams-solarized-dark.ghostty \
+              ./plugin.json \
+              --title "$TAG" \
+              --generate-notes
+          fi
