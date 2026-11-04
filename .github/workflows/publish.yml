@@ -61,3 +61,17 @@ jobs:
               --title "$TAG" \
               --generate-notes
           fi
+
+      - name: Publish to Open VSX
+        if: env.OVSX_PAT != ''
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          API_URL="https://open-vsx.org/api/williamnorland/williams-solarized-dark/$VERSION"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$API_URL")
+          if [ "$STATUS" = "200" ]; then
+            echo "Version $VERSION is already published to Open VSX."
+          else
+            npx --yes ovsx publish ./williams-solarized-dark.vsix -p "$OVSX_PAT"
+          fi
