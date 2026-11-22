@@ -9,7 +9,8 @@
 
 ## Theme Palette Consistency
 
-All application themes (`themes/vscode/`, `themes/antigravity/`, `themes/ghostty/`, and `plugin.json`)
+All application themes (`themes/vscode/`, `themes/antigravity/`,
+`themes/ghostty/`, `themes/zed/`, and `plugin.json`)
 must maintain identical color palettes:
 
 - **Background**: `#002B36` (Solarized base03)
