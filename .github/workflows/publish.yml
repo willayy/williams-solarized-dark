@@ -28,7 +28,7 @@ jobs:
           node-version: 20
 
       - name: Package extension (VSIX)
-        run: npx --yes @vscode/vsce package --out ./williams-solarized-dark.vsix
+        run: npx --yes @vscode/vsce package --out ./c-solarized-dark.vsix
 
       - name: Determine release tag
         id: release_tag
@@ -47,16 +47,16 @@ jobs:
           TAG="${{ steps.release_tag.outputs.tag }}"
           if gh release view "$TAG" > /dev/null 2>&1; then
             gh release upload "$TAG" \
-              ./williams-solarized-dark.vsix \
-              ./themes/antigravity/williams-solarized-dark-antigravity.json \
-              ./themes/ghostty/williams-solarized-dark.ghostty \
+              ./c-solarized-dark.vsix \
+              ./themes/antigravity/c-solarized-dark-antigravity.json \
+              ./themes/ghostty/c-solarized-dark.ghostty \
               ./plugin.json \
               --clobber
           else
             gh release create "$TAG" \
-              ./williams-solarized-dark.vsix \
-              ./themes/antigravity/williams-solarized-dark-antigravity.json \
-              ./themes/ghostty/williams-solarized-dark.ghostty \
+              ./c-solarized-dark.vsix \
+              ./themes/antigravity/c-solarized-dark-antigravity.json \
+              ./themes/ghostty/c-solarized-dark.ghostty \
               ./plugin.json \
               --title "$TAG" \
               --generate-notes
@@ -69,12 +69,12 @@ jobs:
         run: |
           PUBLISHER=$(node -p "require('./package.json').publisher")
           VERSION=$(node -p "require('./package.json').version")
-          API_URL="https://open-vsx.org/api/$PUBLISHER/williams-solarized-dark/$VERSION"
+          API_URL="https://open-vsx.org/api/$PUBLISHER/c-solarized-dark/$VERSION"
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$API_URL")
           if [ "$STATUS" = "200" ]; then
             echo "Version $VERSION is already published to Open VSX."
           else
-            OUTPUT=$(npx --yes ovsx publish ./williams-solarized-dark.vsix -p "$OVSX_PAT" 2>&1) || {
+            OUTPUT=$(npx --yes ovsx publish ./c-solarized-dark.vsix -p "$OVSX_PAT" 2>&1) || {
               if echo "$OUTPUT" | grep -q "already published"; then
                 echo "Version $VERSION is already published to Open VSX."
               else

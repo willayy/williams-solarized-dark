@@ -1,10 +1,10 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
-  "name": "Williams Solarized Dark",
-  "author": "William Norland",
+  "name": "C Solarized Dark",
+  "author": "willayy",
   "themes": [
     {
-      "name": "Williams Solarized Dark",
+      "name": "C Solarized Dark",
       "appearance": "dark",
       "style": {
         "background": "#002B36",
@@ -62,7 +62,7 @@
         "icon.disabled": "#586E7580",
         "icon.muted": "#586E75",
         "icon.placeholder": "#93A1A1AA",
-        "ignored": "#586E75",
+        "ignored": "#586E7580",
         "ignored.background": "#00000000",
         "ignored.border": "#00000000",
         "info": "#268BD2",

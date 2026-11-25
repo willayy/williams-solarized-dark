@@ -1,12 +1,12 @@
 {
-  "name": "williams-solarized-dark",
-  "displayName": "Williams Solarized Dark",
-  "description": "Williams Solarized Dark theme for Antigravity",
+  "name": "c-solarized-dark",
+  "displayName": "C Solarized Dark",
+  "description": "C Solarized Dark theme for Antigravity",
   "version": "0.1.1",
   "themes": [
     {
-      "id": "williams-solarized-dark",
-      "label": "Williams Solarized Dark",
+      "id": "c-solarized-dark",
+      "label": "C Solarized Dark",
       "mode": "dark",
       "seeds": {
         "background": "#002B36",

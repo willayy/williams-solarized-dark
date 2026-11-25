@@ -1,13 +1,13 @@
 {
-  "name": "williams-solarized-dark",
-  "displayName": "Williams Solarized Dark",
+  "name": "c-solarized-dark",
+  "displayName": "C Solarized Dark",
   "description": "A custom variant of the default solarized dark theme",
   "version": "0.1.1",
   "publisher": "willayy",
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/willayy/williams-solarized-dark.git"
+    "url": "https://github.com/willayy/themes.git"
   },
   "engines": {
     "vscode": "^1.80.0"
@@ -25,9 +25,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Williams Solarized Dark",
+        "label": "C Solarized Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/vscode/williams-solarized-dark-color-theme.json"
+        "path": "./themes/vscode/c-solarized-dark-color-theme.json"
       }
     ]
   }
